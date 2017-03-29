@@ -2,13 +2,13 @@ class Knapsack
 {
     // A function that returns maximum of two integers
     static int max(int a, int b) { return (a > b)? a : b; }
-      
+
     // Returns the maximum value that can be put in a knapsack of capacity W
     static int knapSack(int W, int wt[], int val[], int n)
     {
 	int i, w;
 	int K[][] = new int[n+1][W+1];
-      
+
 	// Build table K[][] in bottom up manner
 	for (i = 0; i <= n; i++)
 	{
@@ -22,7 +22,7 @@ class Knapsack
                    		K[i][w] = K[i-1][w];
          	}
       	}
-      
+
       return K[n][W];
     }
 
